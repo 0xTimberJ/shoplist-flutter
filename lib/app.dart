@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_core/firebase_core.dart'; // Temporairement désactivé
 import 'core/di/service_locator.dart';
 
 class ShopListApp extends StatelessWidget {
@@ -16,8 +16,9 @@ class ShopListApp extends StatelessWidget {
       home: const Scaffold(
         body: Center(
           child: Text(
-            'ShopList App - En cours de développement',
-            style: TextStyle(fontSize: 18),
+            'ShopList App - En cours de développement\n\n✅ Architecture Clean + MVVM\n✅ SQLite Database\n✅ Dependency Injection\n\n🚧 Firebase sera configuré plus tard',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 16),
           ),
         ),
       ),
@@ -25,12 +26,12 @@ class ShopListApp extends StatelessWidget {
   }
 }
 
-// Initialize Firebase and dependencies
+// Initialize dependencies (Firebase désactivé temporairement)
 Future<void> initializeApp() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize Firebase
-  await Firebase.initializeApp();
+  // TODO: Initialize Firebase later when properly configured
+  // await Firebase.initializeApp();
 
   // Setup dependency injection
   await setupServiceLocator();
